@@ -168,6 +168,24 @@ Then open:
 - `http://127.0.0.1:8080/`
 - `http://127.0.0.1:8080/blog`
 
+## Run With Docker Compose
+
+Build and run in an isolated container:
+
+```bash
+docker compose up --build
+```
+
+Then open:
+- `http://127.0.0.1:8080/`
+- `http://127.0.0.1:8080/blog`
+
+Stop:
+
+```bash
+docker compose down
+```
+
 ## Tests
 
 Run all tests via CLI:
@@ -218,4 +236,5 @@ Concrete improvements:
 2. Add stricter template tokenizer with line/column error reporting.
 3. Add route linting step to detect ambiguous score ties at boot.
 4. Replace generic context merge with namespaced event payload channels.
+5. Add optional disk-backed queue adapter while keeping the same `emit/drain` API.
 5. Add optional disk-backed queue adapter while keeping the same `emit/drain` API.
